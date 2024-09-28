@@ -2,9 +2,10 @@
 
 services: 
   nginx:
+    container_name: nginx
     build: ./requirements/nginx
     image: nginx
-    container_name: nginx
-    ports: 
-      - "80:80"
+    ports:
+      - 443:443
+
 
