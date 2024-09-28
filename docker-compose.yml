@@ -1,9 +1,10 @@
-#version: "3.3"  
+#version: "3.3"
 
-services:
+services: 
   nginx:
-    build:
-      context: ./requirements/nginx
+    build: ./requirements/nginx
+    image: nginx
     container_name: nginx
-    ports:
+    ports: 
       - "80:80"
+
