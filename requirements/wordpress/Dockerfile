@@ -1,4 +1,4 @@
-FROM dedbian:latest
+FROM debian:latest
 
 RUN apt-get update && apt-get upgrade && apt install php-fpm -y
 
