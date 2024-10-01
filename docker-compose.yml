@@ -9,8 +9,8 @@ services:
     image: nginx
     ports:
       - "80:80"
-    depends_on:
-     - wordpress
+    # depends_on:
+    #  - wordpress
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress/
@@ -19,10 +19,10 @@ services:
       - ./web:/var/www/html
     expose:
       - "9000"
-  # mariadb:
-  #   container_name: mariadb
-  #   build: ./requirements/mariadb/
-  #   restart: always
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb/
+    restart: always
 
 
 
